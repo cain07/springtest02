@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 
+<bean id="userId" class="com.cain.e_xml.User" >
+	<property name="username" value="jjj"></property>
+	<property name="uid" value="88999"></property>
+	<property name="homeAdrr" ref="homeadr"></property>
+	
+</bean>  
+
+<bean id="homeadr" class="com.cain.e_xml.Address">
+	<property name="addr" value="kkk"></property>
+	<property name="tel" value="999999"></property>
+</bean>
+
+<bean id="collDataId" class="com.cain.e_xml.CollectData">
+	<property name="arrayData">
+		<array>
+			<value>222</value>
+			<value>"sss"</value>
+			<value>333</value>
+			<value>299</value>
+			
+		</array>
+	</property>
+	
+	<property name="listData">
+		<list>
+		  <value>"sss"</value>
+			<value>333</value>
+			<value>299</value>
+		</list>
+	</property>
+	
+	
+	<property name="mapData">
+			<map>
+				<entry key="jack" value="杰克"></entry>
+				<entry>
+					<key><value>rose</value></key>
+					<value>肉丝</value>
+				</entry>
+			</map>
+		</property>
+		
+		<property name="propsData">
+			<props>
+				<prop key="高富帅">嫐</prop>
+				<prop key="白富美">嬲</prop>
+				<prop key="男屌丝">挊</prop>
+			</props>
+		</property>
+	
+</bean>
+</beans>
